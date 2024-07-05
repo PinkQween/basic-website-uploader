@@ -8,7 +8,10 @@ const uploadFile = async () => {
     }
 
     const file = fileInput.files[0];
-    const config = await fetch('config.json').then(response => response.json());
+    const config= await fetch('config.json').then(response => response.json());
+
+    console.log(await fetch('config.json').then(response => response));
+    console.log(await fetch('config.json').then(response => response.json()));
 
     const formData = new FormData();
     formData.append('file', file);
