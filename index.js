@@ -1,4 +1,4 @@
-async function uploadFile() {
+const uploadFile = async () => {
     const fileInput = document.getElementById('fileInput');
     const status = document.getElementById('status');
 
