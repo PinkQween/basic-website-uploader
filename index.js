@@ -16,7 +16,7 @@ const uploadFile = async () => {
     console.log(config.scheme + "://" + config.host + (":" + config.port) ?? "" + config.endpoint);
 
     try {
-        const response = await fetch(config.scheme + "://" + config.host + (":" + config.port) ?? "" + config.endpoint, {
+        const response = await fetch(config.scheme + "://" + config.host + ((":" + config.port) ?? "") + config.endpoint, {
             method: config.method,
             body: formData
         });
