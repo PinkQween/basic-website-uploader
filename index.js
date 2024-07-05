@@ -8,10 +8,7 @@ const uploadFile = async () => {
     }
 
     const file = fileInput.files[0];
-    const config= await fetch('config.json').then(response => response.json());
-
-    console.log(await fetch('config.json').then(response => response));
-    console.log(await fetch('config.json').then(response => response.json()));
+    const config = await fetch('config.json').then(response => response.json());
 
     const formData = new FormData();
     formData.append('file', file);
@@ -19,7 +16,7 @@ const uploadFile = async () => {
     console.log(config.scheme + "://" + config.host + (":" + config.port) ?? "" + config.endpoint);
 
     try {
-        const response = await fetch(config.scheme + "://" + config.host + (":" +conifg.port) ?? "" + config.endpoint, {
+        const response = await fetch(config.scheme + "://" + config.host + (":" + conifg.port) ?? "" + config.endpoint, {
             method: config.method,
             body: formData
         });
